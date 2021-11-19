@@ -15,7 +15,8 @@ restaurant_data = pd.read_sql_query('select * from az_restaurants', con=engine)
 # Create an instance of Flask
 app = Flask(__name__)
 
-# Route to render index.html template 
+
+### Home Page and Rerouting ###
 @app.route("/")
 def home():
 
@@ -23,6 +24,36 @@ def home():
     restaurant_df = pd.DataFrame(restaurant_data.groupby(['city'])['stars'].count().reset_index())
     # Return template and data
     return render_template("/index.html", topten = data_html,restaurant_data=restaurant_data,restaurant_df=restaurant_df)
+
+@app.route("/index.html")
+def returnhome():
+
+    data_html = HTML(topten_data.to_html(index=False,classes='table table-dark table-striped'))
+    restaurant_df = pd.DataFrame(restaurant_data.groupby(['city'])['stars'].count().reset_index())
+    # Return template and data
+    return render_template("/index.html", topten = data_html,restaurant_data=restaurant_data,restaurant_df=restaurant_df)
+
+### Data Model Pages #
+@app.route("/linearRegression.html")
+def datamodel_linearRegression():
+    return render_template("/linearRegression.html")
+
+@app.route("/randomForest.html")
+def datamodel_randomForest():
+    return render_template("/randomForest.html")
+
+@app.route("/neuralNetworks.html")
+def datamodel_neuralNetworks():
+    return render_template("/neuralNetworks.html")
+
+@app.route("/comparison.html")
+def comparison():
+    return render_template("/comparison.html")
+
+@app.route("/data.html")
+def data():
+    return render_template("/data.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)

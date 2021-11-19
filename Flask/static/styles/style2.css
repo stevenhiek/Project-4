@@ -1,0 +1,74 @@
+
+/* Data Model  */
+.dataModel-parent-container {
+  margin: 10px;
+}
+.dataModel-container {
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* navbar styling*/
+.navbar{
+  padding-top:0px;
+  padding-bottom: 0px;
+  padding-right:30px;
+}
+a.navbar-brand {
+  margin-left: 10px;
+  padding: 10px;
+  background-color: rgb(179, 70, 62);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+}
+.navbar-brand-container {
+  background-color: rgb(179, 70, 62);
+}
+
+img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  height: 70px;
+}
+
+h3 {
+  text-align: center;
+}
+
+/* header styling*/
+h3{
+  color: rgb(179, 70, 62);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 15px;
+}
+
+/* fontstyling for text*/
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  padding:10px;
+}
+
+/* body background*/
+body{
+   background-color: rgb(223, 222, 222);
+   /* margin-left: 0;
+   margin-right: 0; */
+}
+
+
+/* small screen adjustments*/
+@media(max-width:767px){
+  .navbar.bg-light{
+      background-color: rgb(81, 175, 160)!important;    
+  }
+
+  .navbar-collapse{
+      background-color: #f8f9fa;
+  }
+  .navbar{
+      padding:inherit;
+  }
+}

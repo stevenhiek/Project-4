@@ -1,3 +1,13 @@
+/* Data Model  */
+/* .dataModel-parent-container {
+    margin: 10px;
+  }
+  .dataModel-container {
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  } */
+
 /* navbar styling*/
 a.navbar-brand{
     margin-left: 10px;
@@ -24,8 +34,6 @@ h3 {
     bottom: 0;
     width: 100%;
 }
-
-
 
 /* header styling*/
 h3{
@@ -54,8 +62,8 @@ p{
 /* body background*/
 body{
     background-color: rgb(223, 222, 222);
-    margin-left: 0;
-    margin-right: 0;
+    /* margin-left: 0;
+    margin-right: 0; */
 }
 .col-md-12{
     background-color: white;
@@ -120,6 +128,9 @@ tr>td:nth-child(10) {
 }
 
 
+
+
+
 /* small screen adjustments*/
 @media(max-width:767px){
     .navbar.bg-light{
@@ -155,10 +166,7 @@ tr>td:nth-child(10) {
       }
       .legend .one-star {
         color: black;
-        
-        
-        
-        
+   
       }
       
       .legend .one-half-star {
