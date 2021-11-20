@@ -7,10 +7,13 @@ import pandas as pd
 from IPython.display import HTML
 
 
-rds_connection_string = "postgres:postgres@localhost:5432/restaurants_db"
-engine = create_engine(f'postgresql://{rds_connection_string}')
-topten_data = pd.read_sql_query('select * from topten', con=engine)
-restaurant_data = pd.read_sql_query('select * from az_restaurants', con=engine)
+# rds_connection_string = "postgres:postgres@localhost:5432/restaurants_db"
+# engine = create_engine(f'postgresql://{rds_connection_string}')
+# topten_data = pd.read_sql_query('select * from topten', con=engine)
+# restaurant_data = pd.read_sql_query('select * from az_restaurants', con=engine)
+restaurant_data = pd.read_csv("Resources/az_yelp_restaurants.csv")
+topten_data = pd.read_csv("Resources/top10_restaurants.csv")
+
 
 # Create an instance of Flask
 app = Flask(__name__)
@@ -19,7 +22,6 @@ app = Flask(__name__)
 ### Home Page and Rerouting ###
 @app.route("/")
 def home():
-
     data_html = HTML(topten_data.to_html(index=False,classes='table table-dark table-striped'))
     restaurant_df = pd.DataFrame(restaurant_data.groupby(['city'])['stars'].count().reset_index())
     # Return template and data
