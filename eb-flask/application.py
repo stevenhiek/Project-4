@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect
-from flask_sqlalchemy import SQLAlchemy
+# from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, Float 
@@ -11,8 +11,8 @@ from IPython.display import HTML
 # engine = create_engine(f'postgresql://{rds_connection_string}')
 # topten_data = pd.read_sql_query('select * from topten', con=engine)
 # restaurant_data = pd.read_sql_query('select * from az_restaurants', con=engine)
-restaurant_data = pd.read_csv("Resources/az_yelp_restaurants.csv")
-topten_data = pd.read_csv("Resources/top10_restaurants.csv")
+restaurant_data = pd.read_csv("eb-flask/static/data/az_yelp_restaurants.csv")
+topten_data = pd.read_csv("eb-flask/static/data/top10_restaurants.csv")
 
 
 # Create an instance of Flask
@@ -36,9 +36,9 @@ def returnhome():
     return render_template("/index.html", topten = data_html,restaurant_data=restaurant_data,restaurant_df=restaurant_df)
 
 ### Data Model Pages #
-@app.route("/linearRegression.html")
+@app.route("/logisticRegression.html")
 def datamodel_linearRegression():
-    return render_template("/linearRegression.html")
+    return render_template("/logisticRegression.html")
 
 @app.route("/randomForest.html")
 def datamodel_randomForest():
