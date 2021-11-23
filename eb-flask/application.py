@@ -15,6 +15,7 @@ restaurant_data = pd.read_csv("eb-flask/static/data/az_yelp_restaurants.csv")
 topten_data = pd.read_csv("eb-flask/static/data/top10_restaurants.csv")
 
 
+
 # Create an instance of Flask
 app = Flask(__name__)
 
