@@ -11,8 +11,8 @@ from IPython.display import HTML
 # engine = create_engine(f'postgresql://{rds_connection_string}')
 # topten_data = pd.read_sql_query('select * from topten', con=engine)
 # restaurant_data = pd.read_sql_query('select * from az_restaurants', con=engine)
-restaurant_data = pd.read_csv("Flask/static/data/az_yelp_restaurants.csv")
-topten_data = pd.read_csv("Flask/static/data/top10_restaurants.csv")
+restaurant_data = pd.read_csv("eb-flask/static/data/az_yelp_restaurants.csv")
+topten_data = pd.read_csv("eb-flask/static/data/top10_restaurants.csv")
 
 
 # Create an instance of Flask
