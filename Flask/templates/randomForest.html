@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title> Data </title>
+  <title> Random Forest </title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -39,28 +39,38 @@
               <li><a class="dropdown-item text-dark" href="neuralNetworks.html"> Neural Networks </a></li>
             </ul>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link text-dark" href="comparison.html">Comparison</a>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <!-- <li class="nav-item">
             <a class="nav-link text-dark" href="data.html">Data</a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
   </nav>
 
 
- <!-- Data -->
+ <!-- Data Model -->
     <div class="dataModel-parent-container" align="center">
       <div class="dataModel-container col-sm-12 col-lg-6">
-        <h2> Data </h2>    
+        <h2> Random Forest Model </h2>    
         <hr>
+        <h3>Run 1: Random Forest</h3>
+        <img src="static/uploads/randomforestRun1.PNG" class="img-fluid" alt="random forest results run 1"> 
+
       </div>  
-      <div class="dataModel-container col-sm-12 col-lg-6">    
-        <h2> Visualizations </h2>
-        <hr>  
-      </div>
+      
+      <br>
+      <h3>Run 2: Extremely Random Classifier </h3>
+      <img src="static/uploads/rfrun2.PNG" class="img-fluid" alt="random forest results run 1"> 
+      <br>
+      <h3>Run 3: Ensemble </h3>
+      <img src="static/uploads/rfrun3.PNG" class="img-fluid" alt="random forest results run 1"> 
+<br>
+      <p>Ensemble Method is the best with an overall Testing Accuracy Score of 84 percent.</p>
+
+
     </div>
          
      
@@ -69,7 +79,7 @@
 
 
 
-<!-- Style for Data Page -->
+<!-- Style for Data Model Page -->
     <style>
       .dataModel-parent-container {
         margin: 10px;
@@ -78,6 +88,10 @@
         margin: 10px;
         padding-top: 10px;
         padding-bottom: 10px;
+      }
+
+      h3 {
+        color:black
       }
     </style>
 
